@@ -36,7 +36,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $result = User::create([
-            'hobi' => $request->hobi,
+            'hobi' => $request->tanggal_lahir,
             'asal' => $request->asal
         ]);
 
@@ -81,7 +81,7 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $result = User::where('id',$id)->first();
-        $result->hobi = $request->input('hobi');
+        $result->tanggal_lahir = $request->input('tanggal_lahir');
         $result->asal = $request->input('asal');
         $result->password = Hash::make($request->input('password'));
         $result->save();
