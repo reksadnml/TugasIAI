@@ -44,3 +44,6 @@ $router->put('git/{id}', 'GitController@update');
 
 //untuk menghapus data
 $router->delete('git/{id}', 'GitController@destroy');
+
+//taskcontroller
+$router->get('persegi', 'TaskController@persegi');
